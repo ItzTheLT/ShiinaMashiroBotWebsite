@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - Shiina Mashiro Bot</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #7289DA;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #7289DA;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+.columns {
+  float: left;
+  width: 20%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #7289DA;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+.ariel {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.ariel {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0;
+  overflow: hidden;
+  background-color: #7289DA;
+}
+ul.navbar a {
+  margin-right: 40px;
+  font-weight: bold; 
+  color:white;
+}
+ul.navbar a:hover {
+  margin-right: 40px;
+  font-weight: bold; 
+  color:#0056B3;
+}
+
+span.title:hover {
+  color:#0056B3;
+}
+</style>
+<link id="theme-style" rel="stylesheet" href="css/bootstrap.css" />
+</head>
+<body>
+<ul class="navbar">
+    <span><a href="index.html"><img width="70" height="70" class="animated rotateIn" src="https://thumbs.gfycat.com/ParallelFoolhardyAsianelephant-max-1mb.gif"/><span class="title" style="font-weight: bold;">Shiina Mashiro Bot</span></a><a href="discord">Request Invitation</a><a href="discord">Discord</a><a href="commands.html">Commands</a></span>
+</ul><br>
+<h1 style="text-align:center" class="ariel">Shiina Mashiro Bot Perks</h2>
+<h4 style="text-align:center" class="ariel">Compare perks of each role</p>
+<img src="https://i.imgur.com/Tjf6Qsy.jpg" alt="" width="672" height="669" style="float: left;" />
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#7289DA">Regular</li>
+    <li>Access to all commands</li>
+    <li>Command Cooldown: 10 seconds</li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#7289DA">Donator</li>
+    <li>Access to all commands</li>
+    <li>Command Cooldown: none</li>
+    <li>Support 24/7</li>
+    <li>Exclusive Command</li>
+    <li class="grey"><a class="button" id="myBtn">Donate</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#7289DA">Partner</li>
+    <li>Access to all commands</li>
+    <li>Command Cooldown: none</li>
+    <li>Support 24/7</li>
+    <li>Exclusive Command</li>
+    <li>Bot default source code</li>
+    <li class="grey">Not open for apply</li>
+  </ul>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 style="text-align: right">Notes</h2>
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>Right now you can only donate TheLT through <a href="https://playerduo.com">PlayerDuo</a>.</p>
+      <p>If you want to donate TheLT with other method, join <a href="discord/index.html">Discord</a>.</p>
+      <p>Please provide your Discord Tag (Ex: TheLT#5057) when donate and join <a href="discord/index.html">Discord</a> so TheLT can whitelist you.</p>
+      <p></p>
+      <a href="https://playerduo.com/lovelythelt" class="button" target="_blank">Click here to donate</a>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+
+</div>
+
+<h4 style="color:black; text-align: center;"><span>© Copyright 2020 <a href="https://thelt.ml" target="_blank">TheLT</a>. All right reserved. Anime: <a href="https://sakurasou.fandom.com/wiki/Sakurasou_Wiki" target="_blank">Sakurasou no Pet na kanojo</a></span></h4>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>

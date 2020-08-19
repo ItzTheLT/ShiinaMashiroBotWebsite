@@ -13,6 +13,14 @@ h3 {
   text-align: center;
 }
 
+h3 a{
+    color: #007BFF;
+}
+
+h3 a:hover{
+    color: #2C2F33;
+}
+
 h2 {
   text-align: center;
 }
@@ -44,6 +52,7 @@ li:last-child {
     border-right: none;
 }
 
+
 li a {
     display: block;
     color: white;
@@ -56,6 +65,11 @@ li a:hover:not(.active) {
     background-color: #7289DA;
 }
 
+ul a {
+  margin-right: 40px;
+  font-weight: bold; 
+  color:white;
+}
 .active {
     background-color: #2C2F33;
 }
