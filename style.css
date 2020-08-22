@@ -207,6 +207,18 @@ td {
   	font-size: 25px;
 }
 
+td a {
+  color: white;
+}
+
+td span {
+  font-size: 15px;
+}
+
+td a:hover {
+  color: #c9c9c9;
+}
+
 .cactive {
   background-color: #7289DA;
 }
