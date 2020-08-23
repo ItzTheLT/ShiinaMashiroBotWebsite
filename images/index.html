@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Shiina Mashiro Wallpaper</title>
+	<style>
+		body {
+		  height: 100%;
+		  background-position: center;
+		  margin-top: 50%;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+	</style>
+</head>
+<body onload="random()">
+	<script type="text/javascript">
+		function random() {
+			var imagelist = [
+		    "https://images4.alphacoders.com/643/thumb-1920-643900.png", 
+		    "https://images4.alphacoders.com/698/698139.png",
+		    "https://images6.alphacoders.com/646/646470.png",
+		    "https://images2.alphacoders.com/644/644961.png",
+		    "https://images4.alphacoders.com/687/687047.png",
+		    "https://images.alphacoders.com/643/643905.jpg",
+		    "https://images7.alphacoders.com/735/735294.png",
+		    "https://images6.alphacoders.com/931/931460.png",
+		    ];
+			const number = Math.floor(Math.random() * (imagelist.length - 1) + 1);
+			document.body.style.backgroundImage = "url('"+ imagelist[number] +"')";
+		}
+		
+	</script>
+</body>

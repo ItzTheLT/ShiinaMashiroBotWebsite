@@ -2,6 +2,40 @@ body {
 	background-color: #111;
 	height: 100%;
 }
+
+.fade-in {
+  animation: fadeIn ease 0.3s;
+  -webkit-animation: fadeIn ease 0.2s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 h1 {
 	margin-top: 300px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -16,7 +50,7 @@ h2 {
   margin-right: 10px;
 }
 
-div.main a {
+div.home a {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   display:inline-block;
@@ -24,7 +58,7 @@ div.main a {
   font-size: 25px;
 }
 
-div.main a:hover {
+div.home a:hover {
   color: #c9c9c9;
 }
 
@@ -32,6 +66,14 @@ h3 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 25px;
 	color: #ffffff;
+}
+
+h3 a {
+	color: #fff;
+}
+
+h3 a:hover {
+	color: #c9c9c9;
 }
 
 .user {
@@ -42,7 +84,13 @@ h3 {
 	color: #c9c9c9;
 }
 
-.main {
+.home {
+  	margin: auto;
+  	width: 80%;
+  	padding: 10px;
+}
+
+.chats {
   	margin: auto;
   	width: 80%;
   	padding: 10px;
@@ -116,13 +164,13 @@ div.navbar li a {
 }
 
 div.navbar li a:hover:not(.active) {
- 	background-color: #111;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+ 	background-color: #282828;
+  	border-top-left-radius: 10px;
+  	border-top-right-radius: 10px;
 }
 
 .active {
- 	background-color: #111;
+  background-color: #111;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -140,7 +188,8 @@ div.nav ul {
   	width: 200px;
   	background-color: #36393F;
   	margin-top: 300px;
-  	margin-left: 200px;
+  	margin-left: 150px;
+  	border: 1px solid #a6a6a6;
 }
 
 div.nav li a {
@@ -148,7 +197,7 @@ div.nav li a {
   	color: #fff;
   	padding: 15px 20px;
   	text-decoration: none;
-  	font-size: 28px;
+  	font-size: 25px;
 }
 
 div.nav li a.active {
@@ -164,10 +213,11 @@ div.nav li a:hover:not(.cactive) {
 div.cmain {
 	overflow: auto;
 	margin-top: 0px;
-	margin-left: 400px;
+	margin-left: 351px;
 	background-color: #36393F;
-	width: 65%;
-	height: 700px;
+	width: 70%;
+	height: 600px;
+	border: 1px solid #a6a6a6;
 }
 div.fun {
 	display: block;
@@ -188,7 +238,7 @@ table {
   	overflow: auto;
   	margin-left: 2px;
   	border-collapse: collapse;
-  	width: 97%;
+  	width: 99%;
 }
 
 th {
@@ -196,7 +246,7 @@ th {
 	text-align: left;
 	border-bottom: 1px solid #ddd;
 	color: white;
-	font-size: 35px;
+	font-size: 30px;
 }
 
 td {
@@ -204,19 +254,7 @@ td {
   	text-align: left;
   	border-bottom: 1px solid #ddd;
   	color: white;
-  	font-size: 25px;
-}
-
-td a {
-  color: white;
-}
-
-td span {
-  font-size: 15px;
-}
-
-td a:hover {
-  color: #c9c9c9;
+  	font-size: 20px;
 }
 
 .cactive {
@@ -246,6 +284,7 @@ h4 a {
 h4 a:hover {
 	color: #c9c9c9;
 }
+
 .cfooter {
 	position: static;
   	left: 0;

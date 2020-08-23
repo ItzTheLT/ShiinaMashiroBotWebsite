@@ -7,25 +7,598 @@
 <body>
 	<div class="navbar">
 		<ul>
-		  <li style="margin-left: 50px" class="active"><a href="#">Home</a></li>
-		  <li><a href="commands.html">Commands</a></li>
-		  <li><a href="chat.html">Chat</a></li>
-		  <li><a href="donate.html">Donate</a></li>	  
-		  <li style="float:right;margin-right: 10px"><a href="https://maple.thelt.ml">Maple Music</a></li>
-		  <li style="float:right;" class="active"><span>Shiina Mashiro</span></li>
+		  <li style="margin-left: 50px" class="active" id="home"><a href="javascript:void(0);">Home</a></li>
+		  <li id="commands"><a href="javascript:void(0);">Commands</a></li>
+		  <li id="chat"><a href="javascript:void(0);">Chat</a></li>
+		  <li id="donate"><a href="javascript:void(0);">Donate</a></li>	  
+		  <li style="float:right;"><a href="images/index.html" title="Click here for random Shiina Mashiro Wallpaper">Shiina Mashiro</a></li>
 		</ul>
 	</div>
-	<div class="main">
-		<img src="./img/shiina.png" alt="Shiina" width="872" height="861" style="float: left; margin-top: 90px"/>
+	<div class="home fade-in" id="home-content">
+		<img src="./img/shiina.png" alt="" width="872" height="861" style="float: left; margin-top: 90px"/>
 		<h1>Shiina Mashiro Bot</h1>
-		<h3>Version: 1.0.8 - Prefix: s!</h3>
+		<h3>Version: 1.0.9 - Prefix: s!</h3>
 		<a href="discord/index.html" class="button">Discord</a>
-		<a href="commands.html" class="button">Commands</a>
-		<a href="donate.html" class="button">Donate</a>
-		<div><span><h2>New feature!</h2><a href="chat.html">Bot answer question!</a></span></div>
-		
+		<a href="javascript:void(0);" class="button" onclick="changecommands()">Commands</a>
+		<a href="javascript:void(0);" class="button" onclick="changedonate()">Donate</a>
+		<div><span><h2>New feature!</h2><a href="javascript:void(0);" onclick="changechat()">Bot answer question!</a></span></div>
 	</div>
+
+	<div class="commands fade-in" id="commands-content" style="display: none;">
+		<div class="nav">
+			<ul>
+			  <li><a href="javascript:void(0);" id="cfun" class="cactive">Fun</a></li>
+			  <li><a href="javascript:void(0);" id="cimages">Images</a></li>
+			  <li><a href="javascript:void(0);" id="cnsfw">NSFW</a></li>
+			  <li><a href="javascript:void(0);" id="cmod">Moderation</a></li>
+			  <li><a href="javascript:void(0);" id="cex">Exclusive</a></li>
+			</ul>
+		</div>
+
+		<div class="title">
+			<h1>Commands list<br><span style="font-size: 20px">Prefix: s! - Version: 1.0.9</span></h1>
+		</div>
+
+		<div class="cmain">
+			<div class="fun fade-in" id="fun">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Alias</th>
+				    <th>Description</th>
+				    <th>Syntax</th>
+				  </tr>
+				  <tr>
+				    <td>anime</td>
+				    <td>animename</td>
+				    <td>Give a random anime name from database.</td>
+				    <td>s!anime</td>
+				  </tr>
+				  <tr>
+				    <td>avatar</td>
+				    <td>profilepicture, profileavatar</td>
+				    <td>Get your or a user's avatar image.</td>
+				    <td>s!avatar [<span style="color:#545454;font-style: italic">blank</span> | user]</td>
+				  </tr>
+				  <tr>
+				    <td>choose</td>
+				    <td>none</td>
+				    <td>Choose randomly one of your provided options.</td>
+				    <td>s!choose</td>
+				  </tr>
+				  <tr>
+				    <td>coronavirus</td>
+				    <td>corona, coronastats</td>
+				    <td>Get a country's coronavirus statistics or global.</td>
+				    <td>s!coronavirus [worldwide | country]</td>
+				  </tr>
+				  <tr>
+				    <td>dice</td>
+				    <td>none</td>
+				    <td>Random Dice number.</td>
+				    <td>s!dice</td>
+				  </tr>
+				  <tr>
+				    <td>gayrate</td>
+				    <td>howgay, gaypercent</td>
+				    <td>How gay are you?</td>
+				    <td>s!gayrate</td>
+				  </tr>
+				  <tr>
+				    <td>hack</td>
+				    <td>none</td>
+				    <td>Real and dangerous choice!</td>
+				    <td>s!hack</td>
+				  </tr>
+				  <tr>
+				    <td>ihateyou</td>
+				    <td>none</td>
+				    <td>Shiina will react IHATEYOU to your requested command.</td>
+				    <td>s!ihateyou</td>
+				  </tr>
+				  <tr>
+				    <td>iloveyou</td>
+				    <td>none</td>
+				    <td>Shiina will react ILOVEYOU to your requested command.</td>
+				    <td>s!iloveyou</td>
+				  </tr>
+				  <tr>
+				    <td>nightcore</td>
+				    <td>none</td>
+				    <td>Give a random nightcore youtube link.</td>
+				    <td>s!nightcore</td>
+				  </tr>
+				  <tr>
+				    <td>owo</td>
+				    <td>owoify</td>
+				    <td>OwOify a text message.</td>
+				    <td>s!owo [message]</td>
+				  </tr>
+				  <tr>
+				    <td>say</td>
+				    <td>repeat</td>
+				    <td>Make Shiina says anything for you.</td>
+				    <td>s!say [message]</td>
+				  </tr>
+				  <tr>
+				    <td>simprate</td>
+				    <td>howsimp, simppercent</td>
+				    <td>How simp are you?</td>
+				    <td>s!simprate</td>
+				  </tr>
+				  <tr>
+				    <td>youtube</td>
+				    <td>yt</td>
+				    <td>Search a youtube video base on your provided keyword.</td>
+				    <td>s!youtube [keyword]</td>
+				  </tr>
+				</table>
+			</div>
+
+			<div class="images fade-in" id="images">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Alias</th>
+				    <th>Description</th>
+				    <th>Syntax</th>
+				  </tr>
+				  <tr>
+				    <td>animeimage</td>
+				    <td>animei, animeimg</td>
+				    <td>Give a random anime image from api.computerfreaker.cf.</td>
+				    <td>s!anime</td>
+				  </tr>
+				  <tr>
+				    <td>baka</td>
+				    <td>none</td>
+				    <td>Give a random baka anime gif.</td>
+				    <td>s!anime</td>
+				  </tr>
+				  <tr>
+				    <td>gifs</td>
+				    <td>gifimage</td>
+				    <td>Give a random gif about Shiina or your request.</td>
+				    <td>s!gifs [<span style="color:#545454;font-style: italic">blank</span> | name]</td>
+				  </tr>
+				  <tr>
+				    <td>hug</td>
+				    <td>hugimage, hugimg</td>
+				    <td>Give a random hug image from api.computerfreak.cf.</td>
+				    <td>s!hug</td>
+				  </tr>
+				  <tr>
+				    <td>loli</td>
+				    <td>loliimage, loliimg</td>
+				    <td>Give a random loli image. You LOLICON!</td>
+				    <td>s!loli</td>
+				  </tr>
+				  <tr>
+				    <td>meme</td>
+				    <td>none</td>
+				    <td>Give a random meme from Reddit.</td>
+				    <td>s!meme</td>
+				  </tr>
+				  <tr>
+				    <td>neko</td>
+				    <td>catgirl</td>
+				    <td>Give a random Neko image from api.computerfreak.cf.</td>
+				    <td>s!neko</td>
+				  </tr>
+				  <tr>
+				    <td>slap</td>
+				    <td>none</td>
+				    <td>Give a random hug image from api.computerfreak.cf.</td>
+				    <td>s!slap</td>
+				  </tr>
+				  <tr>
+				    <td>waifu</td>
+				    <td>waifuimage, waifuimg</td>
+				    <td>Give a random waifu avatar image.</td>
+				    <td>s!waifu</td>
+				  </tr>
+				</table>
+			</div>
+
+			<div class="nsfw fade-in" id="nsfw">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Alias</th>
+				    <th>Description</th>
+				    <th>Syntax</th>
+				  </tr>
+				  <tr>
+				    <td>boobs</td>
+				    <td>nsfwboobs, boobsimg</td>
+				    <td>Give a random boobs image/gif.</td>
+				    <td>s!boobs</td>
+				  </tr>
+				  <tr>
+				    <td>feet</td>
+				    <td>nsfwfeet, feetimg</td>
+				    <td>Give a feet hentai image.</td>
+				    <td>s!feet</td>
+				  </tr>
+				  <tr>
+				    <td>hentai</td>
+				    <td>nsfwhentai, hentaiimg</td>
+				    <td>Give a random hentai image.</td>
+				    <td>s!hentai</td>
+				  </tr>
+				  <tr>
+				    <td>hentaigif</td>
+				    <td>nsfwhentaigif, gifhentai</td>
+				    <td>Give a random hentai gif.</td>
+				    <td>s!hentaigif</td>
+				  </tr>
+				  <tr>
+				    <td>nsfwloli</td>
+				    <td>lolihentai, lolihentaiimg</td>
+				    <td>Give a random loli hentai image. FBI INC!</td>
+				    <td>s!nsfwloli</td>
+				  </tr>
+				  <tr>
+				    <td>nsfwneko</td>
+				    <td>nekohentai, nekohentaiimg</td>
+				    <td>Give a random Neko hentai image.</td>
+				    <td>s!nsfwneko</td>
+				  </tr>
+				  <tr>
+				    <td>nsfwnekogif</td>
+				    <td>nekohentaigif, gifnekohentai</td>
+				    <td>Give a random Neko hentai gif.</td>
+				    <td>s!nsfwnekogif</td>
+				  </tr>
+				  <tr>
+				    <td>tits</td>
+				    <td>nsfwtits, titsimg</td>
+				    <td>Give a random hentai image included tits.</td>
+				    <td>s!tits</td>
+				  </tr>
+				  <tr>
+				    <td>trap</td>
+				    <td>trapimg</td>
+				    <td>Give a random Trap image. EWW Gay!</td>
+				    <td>s!trap</td>
+				  </tr>
+				</table>
+			</div>
+
+			<div class="mod fade-in" id="mod">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Alias</th>
+				    <th>Description</th>
+				    <th>Syntax</th>
+				  </tr>
+				  <tr>
+				    <td>ban</td>
+				    <td>b, flycolor, payacc</td>
+				    <td>Ban a user from the server.</td>
+				    <td>s!ban [user] [reason]</td>
+				  </tr>
+				  <tr>
+				    <td>clear</td>
+				    <td>purge</td>
+				    <td>Clear up to 100 messages in a text channel.</td>
+				    <td>s!clear [amount]</td>
+				  </tr>
+				  <tr>
+				    <td>date</td>
+				    <td>d, today</td>
+				    <td>Get today's date and today's event.</td>
+				    <td>s!date</td>
+				  </tr>
+				  <tr>
+				    <td>help</td>
+				    <td>none</td>
+				    <td>Get link to this page.</td>
+				    <td>s!help</td>
+				  </tr>
+				  <tr>
+				    <td>kick</td>
+				    <td>k, removeuser, removeu</td>
+				    <td>Kick a user from the server.</td>
+				    <td>s!kick [user] [reason]</td>
+				  </tr>
+				  <tr>
+				    <td>mute</td>
+				    <td>m</td>
+				    <td>Temporarily mute a user!</td>
+				    <td>s!mute [user] [time] [reason]</td>
+				  </tr>
+				  <tr>
+				    <td>ping</td>
+				    <td>latency</td>
+				    <td>Get bot's latency.</td>
+				    <td>s!ping</td>
+				  </tr>
+				  <tr>
+				    <td>serverinfo</td>
+				    <td>svinfo</td>
+				    <td>Get server's info.</td>
+				    <td>s!serverinfo</td>
+				  </tr>
+				  <tr>
+				    <td>unmute</td>
+				    <td>um</td>
+				    <td>Unmute a muted user.</td>
+				    <td>s!unmute [user]</td>
+				  </tr>
+				  <tr>
+				    <td>userinfo</td>
+				    <td>uinfo, accountinfo, user, profile</td>
+				    <td>Get your or a user's account information.</td>
+				    <td>s!userinfo [<span style="color:#545454;font-style: italic">blank</span> | user]</td>
+				  </tr>
+				  <tr>
+				    <td>vote</td>
+				    <td>poll</td>
+				    <td>Open a vote for everyone. Maximum of 5 options!</td>
+				    <td>s!vote [time] [opt1] [opt2] ...</td>
+				  </tr>
+				  <tr>
+				    <td>ynpoll</td>
+				    <td>yesnopoll</td>
+				    <td>Open a Yes or No vote for a questiob.</td>
+				    <td>s!ynpoll [time] [question]</td>
+				  </tr>
+				</table>
+			</div>
+
+			<div class="exc fade-in" id="exc">
+				<table>
+				  <tr>
+				    <th>Name</th>
+				    <th>Alias</th>
+				    <th>Description</th>
+				    <th>Syntax</th>
+				    <th>User</th>
+				  </tr>
+				  <tr>
+				    <td>ign</td>
+				    <td>verify, hverify, playername</td>
+				    <td>Verify your identity on the Hypixel Server. Only work in #verify.</td>
+				    <td>s!ign [playername]</td>
+				    <td><a class="user" href="https://vietnamplus.ml">VietNamPlus</a>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="chats fade-in" id="chat-content" style="display: none;">
+		<h1 style="margin-top: 100px; text-align: center">Chat! Bot answer your questions!</h1>
+		<h3 style="text-align: center">Usage: Chat 'hey shiina' or 'shiina' and bot will listen to your question in the next 10 seconds.</h3>
+		<div class="chat">
+			<table>
+			  <tr>
+			    <th>Question</th>
+			    <th></th>
+			    <th>Bot response</th>
+			  </tr>
+			  <tr>
+			    <td>hi / hello</td>
+			    <td></td>
+			    <td>👋 Konichiwa!</td>
+			  </tr>
+			  <tr>
+			    <td>Who is your owner?</td>
+			    <td></td>
+			    <td>TheLT#5057 is my owner!</td>
+			  </tr>
+			  <tr>
+			    <td>Am I gay?</td>
+			    <td></td>
+			    <td>Yep, you are gay. / Nope, you are not gay.</td>
+			  </tr>
+			  <tr>
+			    <td>How gay am I?</td>
+			    <td></td>
+			    <td>You are (random percent) gay.</td>
+			  </tr>
+			  <tr>
+			    <td>how gay is [@mention]?</td>
+			    <td></td>
+			    <td>(random percent)</td>
+			  </tr>
+			  <tr>
+			    <td>Do you love me?</td>
+			    <td></td>
+			    <td>DENIED</td>
+			  </tr>
+			  <tr>
+			    <td>What time is it?</td>
+			    <td></td>
+			    <td>Bot will respond ASIA/HO_CHI_MINH Time</td>
+			  </tr>
+			  <tr>
+			    <td>nvm / nevermind / nothing</td>
+			    <td></td>
+			    <td>Guess her responses :)</td>
+			  </tr>
+			  <tr>
+			    <td>Who is your crush? / who is your love?</td>
+			    <td></td>
+			    <td>Guess her responses :)</td>
+			  </tr>
+			  <tr>
+			    <td>Who are you?</td>
+			    <td></td>
+			    <td>Guess her responses :)</td>
+			  </tr>
+			  <tr>
+			    <td>Website / What is your website?</td>
+			    <td></td>
+			    <td>Guess her responses :)</td>
+			  </tr>
+			</table>
+		</div>
+		<br>
+		<h3 style="text-align: center">Want to contribute your question? Join my <a href="discord/index.html" style="color:white; ">Discord Server</a> and give me your suggestion!<h3>
+	</div>
+
+	<div class="donate fade-in" id="donate-content" style="display: none;">
+		<img src="./img/shiinaneko.png" alt="" width="872" height="861" style="float: right; margin-top: 90px"/>
+		<img src="./img/heart.gif" width="300" height="300" alt="" style="float: right; margin-top: -900px; margin-left: 500px"/>
+		<h1>Supporting me by donating!</h1>
+		<h3>If you like my works, donate me so I can buy coffee :)</h3>
+		<h3>You also get:</h3>
+		<h3>+ Command Cooldown bypass<br>+ Exclusive command<br>+ Custom new member welcome message in channel/direct message<br>+ Your own event in s!date<br>+ Music command for your server (Coming soon)</h3>
+		<h3>from Donating me!</h3>
+		<a href="https://playerduo.com/lovelythelt" class="button" target="_blank">Click here to donate me! (PlayerDuo)</a>
+		<h4 style="color:white">Notes: Please include your Discord Tag when donate and join my <a href="discord/index.html">Discord Server</a> so I can whitelist you.</h4>
+
+	</div>
+
 	<div class="footer">
-		<h4>© Copyright 2020 <a href="https://thelt.ml" target="_blank">TheLT</a>. All right reserved! <br>Anime: <a href="https://sakurasou.fandom.com/wiki/Sakurasou_Wiki" target="_blank">Sakurasou no Pet na kanojo</a></h4>
+		<h4>© Copyright 2020 <a href="https://thelt.ml" target="_blank">TheLT</a>. All right reserved!<br> Anime: <a href="https://sakurasou.fandom.com/wiki/Sakurasou_Wiki" target="_blank">Sakurasou no Pet na kanojo</a></h4>
 	</div>
+
+	<script type="text/javascript">
+		document.getElementById("home").onclick = function() {
+		    document.getElementById("home").classList.add('active');
+		    document.getElementById("commands").classList.remove('active');
+		    document.getElementById("chat").classList.remove('active');
+		    document.getElementById("donate").classList.remove('active');
+		    document.getElementById('home-content').style.display = "block";
+		    document.getElementById('commands-content').style.display = "none";
+		    document.getElementById('chat-content').style.display = "none";
+		    document.getElementById('donate-content').style.display = "none";
+    	}
+
+    	document.getElementById("commands").onclick = function() {
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.add('active');
+		    document.getElementById("chat").classList.remove('active');
+		    document.getElementById("donate").classList.remove('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "block";
+		    document.getElementById('chat-content').style.display = "none";
+		    document.getElementById('donate-content').style.display = "none";
+    	}
+
+    	function changecommands() {
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.add('active');
+		    document.getElementById("chat").classList.remove('active');
+		    document.getElementById("donate").classList.remove('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "block";
+		    document.getElementById('chat-content').style.display = "none";
+		    document.getElementById('donate-content').style.display = "none";
+    	}
+
+    	document.getElementById("chat").onclick = function() {
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.remove('active');
+		    document.getElementById("chat").classList.add('active');
+		    document.getElementById("donate").classList.remove('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "none";
+		    document.getElementById('chat-content').style.display = "block";
+		    document.getElementById('donate-content').style.display = "none";
+    	}
+
+    	function changechat(){
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.remove('active');
+		    document.getElementById("chat").classList.add('active');
+		    document.getElementById("donate").classList.remove('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "none";
+		    document.getElementById('chat-content').style.display = "block";
+		    document.getElementById('donate-content').style.display = "none";
+    	}
+
+    	document.getElementById("donate").onclick = function(){
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.remove('active');
+		    document.getElementById("chat").classList.remove('active');
+		    document.getElementById("donate").classList.add('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "none";
+		    document.getElementById('chat-content').style.display = "none";
+		    document.getElementById('donate-content').style.display = "block";
+    	}
+
+    	function changedonate(){
+		    document.getElementById("home").classList.remove('active');
+		    document.getElementById("commands").classList.remove('active');
+		    document.getElementById("chat").classList.remove('active');
+		    document.getElementById("donate").classList.add('active');
+		    document.getElementById('home-content').style.display = "none";
+		    document.getElementById('commands-content').style.display = "none";
+		    document.getElementById('chat-content').style.display = "none";
+		    document.getElementById('donate-content').style.display = "block";
+    	}
+
+    	var fun = document.getElementById('fun');
+    	var images = document.getElementById('images');
+    	var nsfw = document.getElementById('nsfw');
+    	var mod = document.getElementById('mod');
+    	var exc = document.getElementById('exc');
+    	document.getElementById("cfun").onclick = function() {
+    		fun.style.display = "block";  
+		    images.style.display = "none";
+		    nsfw.style.display = "none";
+		    mod.style.display = "none";
+		    exc.style.display = "none";
+		    document.getElementById("cfun").classList.add('cactive');
+		    document.getElementById("cimages").classList.remove('cactive');
+		    document.getElementById("cnsfw").classList.remove('cactive');
+		    document.getElementById("cmod").classList.remove('cactive');
+		    document.getElementById("cex").classList.remove('cactive');
+    	}
+		document.getElementById("cimages").onclick = function() {
+    		fun.style.display = "none";  
+		    images.style.display = "block";
+		    nsfw.style.display = "none";
+		    mod.style.display = "none";
+		    exc.style.display = "none";
+		    document.getElementById("cfun").classList.remove('cactive');
+		    document.getElementById("cimages").classList.add('cactive');
+		    document.getElementById("cnsfw").classList.remove('cactive');
+		    document.getElementById("cmod").classList.remove('cactive');
+		    document.getElementById("cex").classList.remove('cactive');
+    	}
+    	document.getElementById("cnsfw").onclick = function() {
+    		fun.style.display = "none";  
+		    images.style.display = "none";
+		    nsfw.style.display = "block";
+		    mod.style.display = "none";
+		    exc.style.display = "none";
+		    document.getElementById("cfun").classList.remove('cactive');
+		    document.getElementById("cimages").classList.remove('cactive');
+		    document.getElementById("cnsfw").classList.add('cactive');
+		    document.getElementById("cmod").classList.remove('cactive');
+		    document.getElementById("cex").classList.remove('cactive');
+    	}
+    	document.getElementById("cmod").onclick = function() {
+    		fun.style.display = "none";  
+		    images.style.display = "none";
+		    nsfw.style.display = "none";
+		    mod.style.display = "block";
+		    exc.style.display = "none";
+		    document.getElementById("cfun").classList.remove('cactive');
+		    document.getElementById("cimages").classList.remove('cactive');
+		    document.getElementById("cnsfw").classList.remove('cactive');
+		    document.getElementById("cmod").classList.add('cactive');
+		    document.getElementById("cex").classList.remove('cactive');
+    	}
+    	document.getElementById("cex").onclick = function() {
+    	    fun.style.display = "none";  
+		    images.style.display = "none";
+		    nsfw.style.display = "none";
+		    mod.style.display = "none";
+		    exc.style.display = "block";
+		    document.getElementById("cfun").classList.remove('cactive');
+		    document.getElementById("cimages").classList.remove('cactive');
+		    document.getElementById("cnsfw").classList.remove('cactive');
+		    document.getElementById("cmod").classList.remove('cactive');
+		    document.getElementById("cex").classList.add('cactive');
+    	}
+	</script>
 </body>
